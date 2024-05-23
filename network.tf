@@ -10,7 +10,7 @@ resource "aws_vpc" "ongc_vpc" {
   }
 }
 
-# Public Subnet in first AZ
+# Public Subnet in first AZ (Dev)
 resource "aws_subnet" "ongc_dev_public_subnet1" {
   vpc_id     = aws_vpc.ongc_vpc.id
   cidr_block = cidrsubnet(var.cidr_block, 8, 1) 
@@ -24,7 +24,7 @@ resource "aws_subnet" "ongc_dev_public_subnet1" {
   }
 }
 
-# Public Subnet in second AZ
+# Public Subnet in second AZ (Prod)
 resource "aws_subnet" "ongc_prod_public_subnet1" {
   vpc_id     = aws_vpc.ongc_vpc.id
   cidr_block = cidrsubnet(var.cidr_block, 8, 10) 
@@ -38,7 +38,7 @@ resource "aws_subnet" "ongc_prod_public_subnet1" {
   }
 }
 
-# Private Subnet in First AZ
+# Private Subnet in First AZ (Dev)
 resource "aws_subnet" "ongc_dev_private_subnet1" {
   vpc_id     = aws_vpc.ongc_vpc.id
   cidr_block = cidrsubnet(var.cidr_block, 8, 10) 
@@ -53,7 +53,7 @@ resource "aws_subnet" "ongc_dev_private_subnet1" {
 }
 
 
-# Private Subnet in second AZ
+# Private Subnet in second AZ (Prod)
 resource "aws_subnet" "ongc_prod_private_subnet1" {
   vpc_id     = aws_vpc.ongc_vpc.id
   cidr_block = cidrsubnet(var.cidr_block, 8, 30) 
