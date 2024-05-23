@@ -1,6 +1,6 @@
 ## A Virtual Private Cloud (VPC) in two Availability Zones (AZs)
 ***
->This repository contains the Terraform demo project that contain creation of AWS resources. [Ensure the prerequisites as mentioned in the Terraform_VPC_Single_AZ](https://github.com/vijaypowar/Terraform_VPC_Single_AZ/blob/main/README.md "Ensure the prerequisites as mentioned in the Terraform_VPC_Single_AZ")
+>This repository contains the Terraform demo project that contain creation of AWS resources. [Ensure the prerequisites as mentioned in the Terraform_VPC_Single_AZ](https://github.com/vijaypowar/Terraform_VPC_Single_AZ/blob/main/README.md)
 #### This setup is for big client. Dev & Prod environment will be in same VPC but in different AZs. This terraform template will deploy the following resources in aws cloud. 
 * 1 VPC >> 10.10.0.0/16
 * 2 Public Subnet >> az > 1a -> 10.10.1.0/24  (dev-public) / 1b -> 10.10.21.0/24 (prod-public)
